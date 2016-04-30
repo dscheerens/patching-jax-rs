@@ -258,7 +258,7 @@ The solution presented above is really all that is necessary to support partial 
 Note that I have not explained how to register the `PartialJsonObjectPatchReader` class with the JAX-RS implementation.
 This is something you will need to do, otherwise the JAX-RS implementation is not aware of your `MessageBodyReader` and the solution does not work.
 It is out of scope to explain how to register `MessageBodyReader` classes as this differs per JAX-RS implementation.
-however, At the end of this article you will find a link to a fully working example project that uses Jersey and you can look at the source to discover how `MessageBodyWriter` classes are registered using Jersey.
+However, at the end of this article you will find a link to a fully working example project that uses Jersey and you can look at the source to discover how `MessageBodyWriter` classes are registered using Jersey.
 
 Adding JSON patch (RFC 6902) support
 ------------------------------------
