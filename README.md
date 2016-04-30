@@ -338,7 +338,7 @@ As you can see the implementation is almost identical to that of the `PartialJso
 The only differences are that it only accepts requests with a media type of `application/json+patch` and that it returns an `JsonObjectPatch` instance rather than a `PartialJsonObjectPatch` instance.
 Since there is nothing special that is new, we'll continue with the `JsonObjectPatch` implementation.
 
-```
+```java
 package com.example;
 
 import java.io.IOException;
@@ -407,5 +407,5 @@ The example application uses an embedded Jetty server in combination with Jersey
 As a final note let me address one drawback of the presented solution.
 Contrary to the to `POST` and `PUT` request methods, it is no longer possible to directly obtain an instance of your entity from the request body as a parameter of the method in your resource class that processes the request.
 Hence you lose the ability to add annotations to the entity instance.
-This can be a problem for example if you make use of Bean Validation ([JSR 303](https://jcp.org/aboutJava/communityprocess/final/jsr303/index.html)).
+This can be a problem for example if you make use of *Bean Validation* ([JSR 303](https://jcp.org/aboutJava/communityprocess/final/jsr303/index.html)).
 One way to deal with this problem is to obtain an reference of the `Validator` instance and call its `validate` method manually inside the method that processes the partial resource modification.
